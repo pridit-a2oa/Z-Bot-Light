@@ -37,7 +37,7 @@
     "clapp": "^1.3.2",
     "cli-table2": "^0.2.0",
     "crypto-js": "^3.1.9-1",
-    "discord.js": "^11.4.2",
+    "discord.js": "^13.3.1",
     "gamedig": "^1.0.46",
     "geoip-lite": "^1.3.2",
     "lodash": "^4.17.10",
