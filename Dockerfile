@@ -1,4 +1,4 @@
-FROM node:9-slim
+FROM node:16-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
