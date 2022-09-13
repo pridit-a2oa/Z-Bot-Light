@@ -1,8 +1,8 @@
-FROM node:18
+FROM node:18-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
-        git \
+        git ca-certificates \
     && apt-get remove --purge -y \
     && apt-get clean autoclean \
     && apt-get autoremove -y \
