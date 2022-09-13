@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:18-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --no-install-suggests \
@@ -12,10 +12,10 @@ RUN apt-get update \
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install --only=production
+RUN yarn install --production
 
 COPY . .
 
-CMD [ "npm", "run", "bot" ]
+CMD [ "yarn", "run", "bot" ]
