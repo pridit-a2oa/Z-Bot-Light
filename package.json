@@ -46,6 +46,7 @@
   },
   "overrides": {
     "micromatch": "^4.0.8",
+    "minimist": "^1.2.8",
     "set-value": "^4.1.0"
   }
 }
