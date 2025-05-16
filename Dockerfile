@@ -1,21 +1,26 @@
-FROM node:23-slim
+FROM node:23-slim AS build
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends --no-install-suggests \
-        git ca-certificates \
-    && apt-get remove --purge -y \
-    && apt-get clean autoclean \
-    && apt-get autoremove -y \
-    && rm /var/lib/apt/lists/* -r
+# Install build tools for native module compilation
+RUN apt-get update && apt-get install -y \
+  python3 \
+  make \
+  g++ \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-# Create app directory
 WORKDIR /usr/src/app
-
-# Install app dependencies
-COPY package.json package-lock.json ./
-
-RUN npm ci
 
 COPY . .
 
-CMD [ "npm", "run", "bot" ]
+# Install dependencies
+RUN npm ci && npm install zlib-sync
+
+# ---- Final image ----
+FROM node:23-slim
+
+WORKDIR /usr/src/app
+
+# Copy node_modules and app from build stage
+COPY --from=build /usr/src/app /usr/src/app
+
+CMD ["npm", "run", "bot"]
