@@ -37,7 +37,7 @@
     "crypto-js": "^4.2.0",
     "discord.js": "^14.25.1",
     "gamedig": "^5.3.2",
-    "geoip-lite": "^1.4.10",
+    "geoip-lite": "^2.0.0",
     "glob-fs": "^0.1.7",
     "lodash": "^4.17.23",
     "moment": "^2.30.1",
