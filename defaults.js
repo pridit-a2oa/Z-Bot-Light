@@ -8,7 +8,7 @@ module.exports = {
     default: true,
     commands: true,
     joins: true,
-    global: true
+    global: true,
   },
   channels: {
     side: 'rcon',
@@ -19,6 +19,6 @@ module.exports = {
     default: 'rcon',
     commands: 'rcon',
     joins: 'rcon',
-    global: 'rcon'
-  }
+    global: 'rcon',
+  },
 };
