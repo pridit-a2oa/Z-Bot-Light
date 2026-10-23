@@ -1,12 +1,10 @@
-FROM node:23-slim AS build
+FROM node:26-alpine3.24 AS build
 
 # Install build tools for native module compilation
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
   python3 \
   make \
-  g++ \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  g++
 
 WORKDIR /usr/src/app
 
@@ -16,7 +14,7 @@ COPY . .
 RUN npm ci && npm install zlib-sync
 
 # ---- Final image ----
-FROM node:23-slim
+FROM node:26-alpine3.24
 
 WORKDIR /usr/src/app
 

@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> This fork is a (loosely) maintained and curated version of [Windmolders/Z-Bot-Light](https://github.com/Windmolders/Z-Bot-Light/) for use with Arma 2: Operation Arrowhead, and as such all credit goes to the original author. Notable differences are that this is dockerized, and in the display and filtering of messages.
+> This fork is a (loosely) maintained and curated version of [Windmolders/Z-Bot-Light](https://github.com/Windmolders/Z-Bot-Light/) for use with Arma 2: Operation Arrowhead, and as such all credit goes to the original author. Notable differences are that this is dockerized, and in the display and filtering of messages, and removal of some unused functionality.
 
 # ZBot
 
