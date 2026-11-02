@@ -40,7 +40,7 @@
     "glob": "^13.0.6",
     "lodash": "^4.18.1",
     "moment": "^2.31.0",
-    "node-schedule": "^2.1.1",
+    "node-schedule": "^2.1.2",
     "nodejs-tail": "^1.1.1",
     "underscore": "^1.13.8"
   },
