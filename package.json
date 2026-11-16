@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "battle-node": "^0.1.2",
-    "bufferutil": "^4.1.0",
+    "bufferutil": "^4.2.0",
     "clapp": "^1.3.3",
     "cli-table3": "^0.6.5",
     "discord.js": "^14.28.1",
